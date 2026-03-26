@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vivendo de Moeda Antiga</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        html { scroll-behavior: smooth; }
+        .faq-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.3s ease-in-out;
+            opacity: 0;
+        }
+        .faq-content.open {
+            max-height: 500px;
+            opacity: 1;
+            padding-bottom: 1rem;
+        }
+        .faq-icon {
+            transition: transform 0.3s ease-in-out;
+        }
+        .faq-icon.open {
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-black text-white font-sans selection:bg-yellow-500 selection:text-black">
+
+    <!-- 1 & 2. HEADLINE & SUBHEADLINE (HERO SECTION) -->
+    <header class="relative pt-12 sm:pt-16 pb-32 px-4 sm:px-6 lg:px-8 overflow-hidden flex flex-col items-center text-center">
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-yellow-900/20 via-black to-black -z-10"></div>
+        
+        <!-- Logo -->
+        <img 
+            src="./assets/logo.png" 
+            alt="Logo Vivendo de Moeda Antiga" 
+            class="w-[90%] max-w-[320px] sm:max-w-[480px] md:max-w-[640px] lg:max-w-[800px] h-auto object-contain mb-8 sm:mb-12 drop-shadow-[0_0_15px_rgba(234,179,8,0.3)]"
+        />
+
+        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-yellow-500/10 border border-yellow-500/20 text-yellow-500 font-medium text-sm mb-8 animate-pulse">
+            <span class="relative flex h-2 w-2">
+                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-yellow-400 opacity-75"></span>
+                <span class="relative inline-flex rounded-full h-2 w-2 bg-yellow-500"></span>
+            </span>
+            70% das vagas encerradas!
+        </div>
+
+        <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight mb-6 max-w-5xl">
+            Monte sua própria fábrica de <span class="text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 to-yellow-600">joias de moeda antiga</span>. Aprenda um método simples que vai fazer você faturar alto, mesmo sem ter experiência e maquinário.
+        </h1>
+        
+        <p class="text-lg sm:text-xl text-gray-300 mb-10 max-w-3xl leading-relaxed">
+            O método passo a passo para criar um negócio altamente lucrativo na sua própria casa, <strong class="text-white">mesmo que você não tenha nenhuma experiência ou muito dinheiro para investir.</strong>
+        </p>
+
+        <!-- VÍDEO (Formato Horizontal 1920x1080 - 16:9) -->
+        <div class="relative w-full max-w-4xl aspect-video mx-auto mb-10 rounded-2xl overflow-hidden shadow-[0_0_50px_rgba(234,179,8,0.2)] border border-yellow-500/30 bg-zinc-900">
+            <iframe 
+                class="absolute inset-0 w-full h-full"
+                src="https://www.youtube.com/embed/ECsjizRVhuk?autoplay=1&mute=1&loop=1&playlist=ECsjizRVhuk&controls=1" 
+                title="Vídeo Vivendo de Moeda Antiga" 
+                frameborder="0" 
+                allow="autoplay; encrypted-media" 
+                allowfullscreen
+                style="border-radius: 12px;">
+            </iframe>
+        </div>
+
+        <a href="#oferta" class="group relative inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-black bg-gradient-to-r from-yellow-400 to-yellow-600 rounded-full overflow-hidden transition-all hover:scale-105 hover:shadow-[0_0_40px_rgba(234,179,8,0.4)]">
+            <span class="absolute w-0 h-0 transition-all duration-500 ease-out bg-white rounded-full group-hover:w-56 group-hover:h-56 opacity-10"></span>
+            <span class="relative flex items-center gap-2">
+                QUERO COMEÇAR AGORA <i data-lucide="arrow-right" class="w-5 h-5 group-hover:translate-x-1 transition-transform"></i>
+            </span>
+        </a>
+    </header>
+
+    <!-- 3. SEÇÃO DE IDENTIFICAÇÃO (DORES) -->
+    <section class="py-24 bg-zinc-950 border-y border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">Você se identifica com alguma dessas situações?</h2>
+                <div class="w-24 h-1 bg-yellow-500 mx-auto rounded-full"></div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-black p-8 rounded-2xl border border-white/5 hover:border-red-500/30 transition-colors group">
+                    <div class="bg-red-500/10 w-16 h-16 rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i data-lucide="dollar-sign" class="w-10 h-10 text-red-500"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-white">Falta de Dinheiro</h3>
+                    <p class="text-gray-400 leading-relaxed">O mês acaba e o dinheiro também. Você trabalha duro, mas nunca sobra nada para realizar seus sonhos ou dar conforto à sua família.</p>
+                </div>
+                <!-- Card 2 -->
+                <div class="bg-black p-8 rounded-2xl border border-white/5 hover:border-red-500/30 transition-colors group">
+                    <div class="bg-red-500/10 w-16 h-16 rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i data-lucide="clock" class="w-10 h-10 text-red-500"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-white">Dependência de Salário</h3>
+                    <p class="text-gray-400 leading-relaxed">Você está preso a um emprego que não valoriza seu esforço, vivendo com medo de ser demitido e dependendo de um único salário.</p>
+                </div>
+                <!-- Card 3 -->
+                <div class="bg-black p-8 rounded-2xl border border-white/5 hover:border-red-500/30 transition-colors group">
+                    <div class="bg-red-500/10 w-16 h-16 rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i data-lucide="trending-down" class="w-10 h-10 text-red-500"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-white">Frustração Financeira</h3>
+                    <p class="text-gray-400 leading-relaxed">Vê outras pessoas prosperando enquanto você continua estagnado, sem saber como criar uma nova fonte de renda segura e lucrativa.</p>
+                </div>
+            </div>
+
+            <div class="mt-16 text-center">
+                <p class="text-2xl font-medium text-gray-300">
+                    Se você respondeu <span class="text-yellow-500 font-bold">SIM</span> para alguma dessas perguntas, <br class="hidden md:block"/>o que vou te mostrar agora vai mudar a sua realidade.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. APRESENTAÇÃO DA SOLUÇÃO -->
+    <section class="py-24 relative overflow-hidden">
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-yellow-600/10 blur-[120px] rounded-full pointer-events-none"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="text-3xl md:text-5xl font-bold mb-6 leading-tight">
+                        A Arte Que Gera <span class="text-yellow-500">Lucros Altos.</span>
+                    </h2>
+                    <p class="text-lg text-gray-300 mb-8 leading-relaxed">
+                        O mercado de joias com moedas antigas está crescendo rápido. São peças exclusivas, com aparência sofisticada e ótima durabilidade, e o melhor: podem ser produzidas com baixo custo e vendidas com alta margem de lucro
+                    </p>
+                    
+                    <ul class="space-y-6">
+                        <li class="flex gap-4">
+                            <div class="flex-shrink-0 mt-1">
+                                <i data-lucide="check-circle-2" class="w-6 h-6 text-yellow-500"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold text-white mb-1">Baixíssimo Investimento</h4>
+                                <p class="text-gray-400">Comece com ferramentas simples que você provavelmente já tem ou custam muito pouco.</p>
+                            </div>
+                        </li>
+                        <li class="flex gap-4">
+                            <div class="flex-shrink-0 mt-1">
+                                <i data-lucide="check-circle-2" class="w-6 h-6 text-yellow-500"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold text-white mb-1">Margem de Lucro Absurda</h4>
+                                <p class="text-gray-400">Uma peça que ela completa custa R$3,90 pode ser vendida por R$35,00 R$40,00</p>
+                            </div>
+                        </li>
+                        <li class="flex gap-4">
+                            <div class="flex-shrink-0 mt-1">
+                                <i data-lucide="check-circle-2" class="w-6 h-6 text-yellow-500"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold text-white mb-1">Venda Online para Todo o Brasil</h4>
+                                <p class="text-gray-400">Não dependa de loja física. Aprenda a vender suas joias pelo Instagram e WhatsApp. Também podem ser vendidas em marketplaces (Shopee, Mercado Livre, Facebook...)</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="relative">
+                    <div class="aspect-square rounded-full border border-yellow-500/20 absolute -inset-4 animate-[spin_10s_linear_infinite]"></div>
+                    <div class="aspect-square rounded-full border border-yellow-500/20 absolute -inset-8 animate-[spin_15s_linear_infinite_reverse]"></div>
+                    <img src="assets/JOIA.png" alt="Joias de moeda antiga" class="rounded-2xl shadow-[0_0_50px_rgba(234,179,8,0.2)] relative z-10 object-cover aspect-[4/5]" referrerpolicy="no-referrer" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. TRANSFORMAÇÃO (ANTES E DEPOIS) -->
+    <section class="py-24 bg-zinc-900 border-y border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-16">A Transformação é Real</h2>
+            
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <div class="bg-black p-8 rounded-2xl border border-red-500/20 relative overflow-hidden">
+                    <div class="absolute top-0 left-0 w-full h-1 bg-red-500"></div>
+                    <h3 class="text-2xl font-bold text-red-500 mb-4">ANTES</h3>
+                    <ul class="text-left space-y-4 text-gray-400">
+                        <li class="flex items-center gap-3"><span class="w-2 h-2 bg-red-500 rounded-full"></span> Trabalhando 8h por dia para os outros</li>
+                        <li class="flex items-center gap-3"><span class="w-2 h-2 bg-red-500 rounded-full"></span> Salário que não chega até o fim do mês</li>
+                        <li class="flex items-center gap-3"><span class="w-2 h-2 bg-red-500 rounded-full"></span> Sem tempo para a família</li>
+                        <li class="flex items-center gap-3"><span class="w-2 h-2 bg-red-500 rounded-full"></span> Zero perspectiva de crescimento</li>
+                    </ul>
+                </div>
+                
+                <div class="bg-black p-8 rounded-2xl border border-yellow-500/30 relative overflow-hidden shadow-[0_0_30px_rgba(234,179,8,0.1)]">
+                    <div class="absolute top-0 left-0 w-full h-1 bg-yellow-500"></div>
+                    <h3 class="text-2xl font-bold text-yellow-500 mb-4">DEPOIS</h3>
+                    <ul class="text-left space-y-4 text-gray-300">
+                        <li class="flex items-center gap-3"><span class="w-2 h-2 bg-yellow-500 rounded-full"></span> Dono do próprio negócio lucrativo</li>
+                        <li class="flex items-center gap-3"><span class="w-2 h-2 bg-yellow-500 rounded-full"></span> Faturamento de R$3k a R$10k mensais</li>
+                        <li class="flex items-center gap-3"><span class="w-2 h-2 bg-yellow-500 rounded-full"></span> Liberdade de tempo e geográfica</li>
+                        <li class="flex items-center gap-3"><span class="w-2 h-2 bg-yellow-500 rounded-full"></span> Orgulho de criar arte com as próprias mãos</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. O QUE O ALUNO VAI APRENDER -->
+    <section class="py-24 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">O que você vai aprender no curso <br/><span class="text-yellow-500">Vivendo de Moeda Antiga</span></h2>
+                <p class="text-gray-400 max-w-2xl mx-auto text-lg">Um passo a passo completo, do absoluto zero até a sua primeira venda.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-zinc-900/50 p-8 rounded-2xl border border-white/5 hover:border-yellow-500/50 transition-all hover:-translate-y-1">
+                    <div class="text-yellow-500 mb-6 bg-yellow-500/10 w-14 h-14 flex items-center justify-center rounded-xl">
+                        <i data-lucide="coins"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Acesso Ao Grupo Vip</h3>
+                    <p class="text-gray-400">Você terá acesso exclusivo ao nosso grupo vip, e a nossa fábrica onde produziremos suas peças no menor custo do mercado.</p>
+                </div>
+                <div class="bg-zinc-900/50 p-8 rounded-2xl border border-white/5 hover:border-yellow-500/50 transition-all hover:-translate-y-1">
+                    <div class="text-yellow-500 mb-6 bg-yellow-500/10 w-14 h-14 flex items-center justify-center rounded-xl">
+                        <i data-lucide="hammer"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Ferramentas Necessárias</h3>
+                    <p class="text-gray-400">A lista exata do que você precisa para começar gastando o mínimo possível.</p>
+                </div>
+                <div class="bg-zinc-900/50 p-8 rounded-2xl border border-white/5 hover:border-yellow-500/50 transition-all hover:-translate-y-1">
+                    <div class="text-yellow-500 mb-6 bg-yellow-500/10 w-14 h-14 flex items-center justify-center rounded-xl">
+                        <i data-lucide="gem"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">A Transformação</h3>
+                    <p class="text-gray-400">Técnicas de montagem e produção da sua jóia</p>
+                </div>
+                <div class="bg-zinc-900/50 p-8 rounded-2xl border border-white/5 hover:border-yellow-500/50 transition-all hover:-translate-y-1">
+                    <div class="text-yellow-500 mb-6 bg-yellow-500/10 w-14 h-14 flex items-center justify-center rounded-xl">
+                        <i data-lucide="dollar-sign"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Precificação</h3>
+                    <p class="text-gray-400">Como calcular seus custos e definir o preço de venda para garantir uma margem de lucro alta.</p>
+                </div>
+                <div class="bg-zinc-900/50 p-8 rounded-2xl border border-white/5 hover:border-yellow-500/50 transition-all hover:-translate-y-1">
+                    <div class="text-yellow-500 mb-6 bg-yellow-500/10 w-14 h-14 flex items-center justify-center rounded-xl">
+                        <i data-lucide="users"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Vendas Online</h3>
+                    <p class="text-gray-400">Estratégias validadas para criar um Instagram vendedor e fechar vendas todos os dias pelo WhatsApp.</p>
+                </div>
+                <div class="bg-zinc-900/50 p-8 rounded-2xl border border-white/5 hover:border-yellow-500/50 transition-all hover:-translate-y-1">
+                    <div class="text-yellow-500 mb-6 bg-yellow-500/10 w-14 h-14 flex items-center justify-center rounded-xl">
+                        <i data-lucide="trending-up"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Escalando o Negócio</h3>
+                    <p class="text-gray-400">Como aumentar sua produção, criar novas peças e transformar sua renda extra na sua renda principal.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. PROVA SOCIAL -->
+    <section class="py-24 bg-zinc-950 border-y border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">Resultados de alguns de <span class="text-yellow-500">nossos alunos:</span></h2>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <div class="bg-black p-4 rounded-2xl border border-white/10 relative flex items-center justify-center overflow-hidden">
+                    <img src="assets/A60.png" alt="Resultado de aluno" class="w-full h-auto object-cover rounded-xl" referrerpolicy="no-referrer" />
+                </div>
+                <div class="bg-black p-4 rounded-2xl border border-white/10 relative flex items-center justify-center overflow-hidden">
+                    <img src="assets/A20.png" alt="Resultado de aluno" class="w-full h-auto object-cover rounded-xl" referrerpolicy="no-referrer" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. AUTORIDADE -->
+    <section class="py-24 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="order-2 md:order-1 relative">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent z-10"></div>
+                    <img src="assets/ft and.png" alt="Criador do método" class="rounded-2xl transition-all duration-700" referrerpolicy="no-referrer" />
+                </div>
+                <div class="order-1 md:order-2">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6">Com quem você vai aprender?</h2>
+                    <div class="w-16 h-1 bg-yellow-500 mb-8"></div>
+                    <h3 class="text-2xl font-medium text-white mb-4">Olá, eu sou o André.</h3>
+                    <div class="space-y-4 text-gray-300 leading-relaxed">
+                        <p>Comecei trabalhando em joalheria em Belo Horizonte e depois passei por vários outros empregos, sempre buscando uma forma de ganhar melhor.</p>
+                        <p>Mesmo assim, nas horas vagas, eu fazia cordões e pulseiras com moedas antigas — mas só para uso próprio.</p>
+                        <p>Até que um dia, em um momento difícil, sem dinheiro nem para o almoço, minha esposa teve uma ideia: vender as peças que eu produzia.</p>
+                        <p>No primeiro dia, faturei R$300,00. A partir dali, tudo mudou.</p>
+                        <p>Comecei a vender todos os dias, passei a fornecer para lojas e, com o tempo, conquistei minha liberdade financeira e geográfica.</p>
+                        <p>Hoje, ensino outras pessoas a seguirem esse mesmo caminho através do método <strong class="text-white">Vivendo de Moeda Antiga</strong>.</p>
+                    </div>
+                    <div class="mt-8 flex items-center gap-4">
+                        <p class="text-sm text-gray-400"><strong class="text-white">+5.000 alunos</strong> já transformaram suas vidas.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9 & 10. OFERTA, ESCASSEZ E URGÊNCIA -->
+    <section id="oferta" class="py-24 bg-gradient-to-b from-zinc-900 to-black relative">
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-3xl h-[1px] bg-gradient-to-r from-transparent via-yellow-500 to-transparent"></div>
+        
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl md:text-5xl font-extrabold mb-6">Tudo o que você precisa para começar <span class="text-yellow-500">HOJE</span></h2>
+                <p class="text-xl text-gray-400">Aproveite a condição especial de lançamento. Vagas limitadas.</p>
+            </div>
+
+            <div class="bg-zinc-950 rounded-3xl border border-yellow-500/30 overflow-hidden shadow-[0_0_50px_rgba(234,179,8,0.15)]">
+                <div class="grid md:grid-cols-2">
+                    <div class="p-8 md:p-12 border-b md:border-b-0 md:border-r border-white/10">
+                        <h3 class="text-2xl font-bold mb-8 flex items-center gap-3">
+                            <i data-lucide="award" class="text-yellow-500"></i> O que está incluso:
+                        </h3>
+                        <ul class="space-y-4">
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="check-circle-2" class="w-6 h-6 text-green-500 flex-shrink-0"></i>
+                                <span class="text-gray-300">Acesso vitalício ao Curso Completo (Vídeo aulas HD)</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="check-circle-2" class="w-6 h-6 text-green-500 flex-shrink-0"></i>
+                                <span class="text-gray-300">Acesso Ao Grupo Vip</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="check-circle-2" class="w-6 h-6 text-green-500 flex-shrink-0"></i>
+                                <span class="text-gray-300">Suporte direto com o professor</span>
+                            </li>
+                        </ul>
+
+                        <div class="mt-10 pt-8 border-t border-white/10">
+                            <h4 class="text-xl font-bold mb-4 text-yellow-500">🎁 Bônus Exclusivos:</h4>
+                            <ul class="space-y-3">
+                                <li class="flex items-center gap-2 text-gray-300"><span class="text-yellow-500 font-bold">+</span> Lista de Fornecedores Secretos (Moedas originais)</li>
+                                <li class="flex items-center gap-2 text-gray-300"><span class="text-yellow-500 font-bold">+</span> Guia: Como vender no Instagram do Zero</li>
+                                <li class="flex items-center gap-2 text-gray-300"><span class="text-yellow-500 font-bold">+</span> Script de Vendas para WhatsApp</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="p-8 md:p-12 bg-black/50 flex flex-col justify-center items-center text-center">
+                        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-red-500/10 border border-red-500/20 text-red-500 font-medium text-sm mb-6">
+                            <i data-lucide="clock" class="w-4 h-4"></i> Oferta encerra em breve
+                        </div>
+                        
+                        <p class="text-gray-400 line-through text-xl mb-2">De R$ 997,00 por apenas</p>
+                        <div class="text-6xl font-black text-white mb-2">
+                            <span class="text-3xl align-top text-yellow-500">12x</span> R$ 25<span class="text-3xl text-yellow-500">,00</span>
+                        </div>
+                        <p class="text-gray-400 mb-8">ou R$ 279,99 à vista</p>
+
+                        <a href="#" class="w-full relative group inline-flex items-center justify-center px-8 py-5 text-xl font-bold text-black bg-gradient-to-r from-yellow-400 to-yellow-600 rounded-xl overflow-hidden transition-all hover:scale-105 hover:shadow-[0_0_40px_rgba(234,179,8,0.4)] mb-6">
+                            <span class="absolute w-0 h-0 transition-all duration-500 ease-out bg-white rounded-full group-hover:w-full group-hover:h-56 opacity-20"></span>
+                            <span class="relative flex items-center gap-2">
+                                QUERO VIVER DE MOEDA ANTIGA <i data-lucide="arrow-right" class="w-6 h-6"></i>
+                            </span>
+                        </a>
+
+                        <div class="flex items-center justify-center gap-2 text-sm text-gray-400">
+                            <i data-lucide="shield-check" class="w-5 h-5 text-green-500"></i> Compra 100% Segura
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Garantia -->
+            <div class="mt-16 flex flex-col md:flex-row items-center gap-8 bg-zinc-900 p-8 rounded-2xl border border-white/5">
+                <div class="w-24 h-24 flex-shrink-0 bg-yellow-500/10 rounded-full flex items-center justify-center border border-yellow-500/30">
+                    <i data-lucide="shield-check" class="w-12 h-12 text-yellow-500"></i>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-bold mb-2">Garantia Incondicional de 7 Dias</h3>
+                    <p class="text-gray-400 leading-relaxed">
+                        Você tem 7 dias para testar o curso. Se por qualquer motivo você achar que não é para você, basta enviar um único e-mail e devolveremos 100% do seu dinheiro. Sem perguntas, sem burocracia. O risco é todo meu.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 12. FAQ -->
+    <section class="py-24 bg-black border-t border-white/5">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">Perguntas Frequentes</h2>
+            </div>
+
+            <div class="space-y-4">
+                <!-- FAQ Item 1 -->
+                <div class="border border-white/10 rounded-xl overflow-hidden bg-zinc-900/50 transition-colors hover:bg-zinc-900">
+                    <button class="faq-btn w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none">
+                        <span class="font-bold text-lg text-white">Preciso de experiência prévia?</span>
+                        <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-yellow-500"></i>
+                    </button>
+                    <div class="faq-content px-6">
+                        <p class="text-gray-400">Não! O curso foi desenhado para iniciantes absolutos. Vou te pegar pela mão e mostrar cada detalhe, desde como segurar a ferramenta até o polimento final.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 2 -->
+                <div class="border border-white/10 rounded-xl overflow-hidden bg-zinc-900/50 transition-colors hover:bg-zinc-900">
+                    <button class="faq-btn w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none">
+                        <span class="font-bold text-lg text-white">Quanto preciso investir em ferramentas?</span>
+                        <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-yellow-500"></i>
+                    </button>
+                    <div class="faq-content px-6">
+                        <p class="text-gray-400">Muito pouco. Ensino adaptações com ferramentas que você provavelmente já tem em casa. Com menos de R$50,00 você já consegue comprar o básico necessário para começar a produzir.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="border border-white/10 rounded-xl overflow-hidden bg-zinc-900/50 transition-colors hover:bg-zinc-900">
+                    <button class="faq-btn w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none">
+                        <span class="font-bold text-lg text-white">Quanto posso ganhar?</span>
+                        <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-yellow-500"></i>
+                    </button>
+                    <div class="faq-content px-6">
+                        <p class="text-gray-400">Depende da sua dedicação. Temos alunos que nos primeiros meses já estavam lucrando de R$2500,00 á R$6,000.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 5 -->
+                <div class="border border-white/10 rounded-xl overflow-hidden bg-zinc-900/50 transition-colors hover:bg-zinc-900">
+                    <button class="faq-btn w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none">
+                        <span class="font-bold text-lg text-white">Por quanto tempo terei acesso ao curso?</span>
+                        <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-yellow-500"></i>
+                    </button>
+                    <div class="faq-content px-6">
+                        <p class="text-gray-400">O acesso é vitalício! Você pode assistir às aulas quantas vezes quiser, no seu próprio ritmo, e terá acesso a todas as futuras atualizações do treinamento.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 bg-zinc-950 border-t border-white/10 text-center text-gray-500 text-sm">
+        <div class="max-w-7xl mx-auto px-4">
+            <p>&copy; 2026 Vivendo de Moeda Antiga. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/5531995028747?text=Ol%C3%A1%21%20Vim%20pela%20p%C3%A1gina%20e%20quero%20saber%20mais%20sobre%20o%20Vivendo%20de%20Moeda%20Antiga." target="_blank" rel="noopener noreferrer" class="fixed bottom-5 right-5 z-50 group flex items-center justify-center">
+        <span class="absolute inline-flex h-full w-full rounded-full bg-[#25D366] opacity-50 animate-ping"></span>
+        <div class="relative bg-[#25D366] text-white p-3 sm:p-4 rounded-full shadow-lg shadow-[#25D366]/40 transition-transform duration-300 group-hover:scale-110">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor" class="w-6 h-6 sm:w-8 sm:h-8">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+            </svg>
+        </div>
+    </a>
+
+    <!-- Scripts -->
+    <script>
+        // Inicializa os ícones do Lucide
+        lucide.createIcons();
+
+        // Lógica do Vídeo (Mute/Unmute)
+        function toggleMute(container) {
+            const video = container.querySelector('video');
+            const muteIcon = container.querySelector('.mute-icon');
+            const unmuteIcon = container.querySelector('.unmute-icon');
+            const tapHint = container.querySelector('.tap-hint');
+            
+            if (video.muted) {
+                video.muted = false;
+                muteIcon.classList.add('hidden');
+                unmuteIcon.classList.remove('hidden');
+                if (tapHint) tapHint.classList.add('hidden');
+            } else {
+                video.muted = true;
+                muteIcon.classList.remove('hidden');
+                unmuteIcon.classList.add('hidden');
+                if (tapHint) tapHint.classList.remove('hidden');
+            }
+        }
+
+        // Lógica do FAQ (Acordeão)
+        document.querySelectorAll('.faq-btn').forEach(button => {
+            button.addEventListener('click', () => {
+                const content = button.nextElementSibling;
+                const icon = button.querySelector('.faq-icon');
+                
+                // Fecha todos os outros
+                document.querySelectorAll('.faq-content').forEach(c => {
+                    if (c !== content) {
+                        c.classList.remove('open');
+                        c.previousElementSibling.querySelector('.faq-icon').classList.remove('open');
+                    }
+                });
+
+                // Alterna o atual
+                content.classList.toggle('open');
+                icon.classList.toggle('open');
+            });
+        });
+    </script>
+</body>
+</html>
