@@ -474,7 +474,16 @@
     <script>
         // Inicializa o Player Profissional Plyr
         const player = new Plyr('#player', {
-            controls: ['play-large', 'play', 'progress', 'current-time', 'mute', 'volume', 'fullscreen']
+            // Removemos 'progress' (barra) e 'current-time' (minutagem)
+            controls: ['play-large', 'play', 'mute', 'volume', 'fullscreen'],
+            youtube: {
+                noCookie: true,
+                rel: 0, 
+                showinfo: 0, 
+                iv_load_policy: 3, 
+                modestbranding: 1, // Esconde a logo do YouTube o máximo possível
+                disablekb: 1
+            }
         });
 
         // Inicializa os ícones do Lucide
